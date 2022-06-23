@@ -101,3 +101,34 @@ Here let's know about them in deep.
     "message": "Admin access token is not valid"
 }
 ```
+
+## Development
+
+If you want to develop the package, it is so simple. just follow steps below.
+
+- Link package
+- Test
+
+> Before you start: **Remember the base or codes are stored in `lib/tfa.js`. You need to edit there.
+
+### Link package
+
+We asoume you are in `tfa-node-sdk` directory. Right. You can open a **tmux** or in another terminal to cd in `test` directory.
+
+In `tfa-node-sdk` directory enter link command:
+
+```shell
+$ npm link
+```
+
+So, in other terminal, or other tmux part, link your development package to your `test` directory. If you are in the `test` directory ok, if not, just say `cd test` and enter the linking command:
+
+```shell
+$ npm link tfa-node-sdk
+```
+
+Linking step is done.
+
+### Test
+
+Your test app is linked. Change anything in package and test it in `test` directory.
