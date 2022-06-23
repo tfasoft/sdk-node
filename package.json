@@ -1,11 +1,10 @@
 {
   "name": "tfa-node-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Telegram Factor Authentication node library",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "nodemon index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
