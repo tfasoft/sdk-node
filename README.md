@@ -1,5 +1,7 @@
 # Telegram Factor Authentication - Node SDK
 
+[Node SDK document is in docs.telefa.com](https://docs.amirhossein.info/sdks/nodejs)
+
 If you are using **TFA** as your authentication service in your node applications, you can use our package.
 
 ## How to use the package
@@ -48,14 +50,14 @@ When you get the result, you have to use `then` and go for other stuff. Let's us
 
 ```javascript
 result.then((result) => {
-    const statCode = result.error;
+    const resultObject = result.response.data;
+    const statCode = result.response.status;
 
-    if (statCode === 800) {
+    if (statCode === 200) {
         console.log('Authenticated.');
-    } else if (statCode === 820) {
-        console.log('User token is wrong.');
-    } else if (statCode === 290) {
-        console.log('Admin token is wrong.');
+        const user = resultObject.user;
+    } else {
+        console.log(resultObject.message);
     }
 });
 ```
@@ -64,11 +66,11 @@ This was just knowing status codes. If you don't know them now, check out our do
 
 Ok, 800 and 290 just return you an 2 lenght object. One is `error` and second is `message`. But 800 doesn't return you a `message`. You check the stat, if it was 800, second item is `user`. User item is the user data that **telegram uid** is stored there and you can use it.
 
-## More about status codes
+## Returned Objects
 
 Here let's know about them in deep.
 
-- ### 800
+- ### 200
 
 ```json
 {
@@ -84,20 +86,20 @@ Here let's know about them in deep.
 }
 ```
 
-- ### 820
+- ### 401
+
+One is access token is wrong.
 
 ```json
 {
-    "error": 820,
     "message": "User authentication token is not valid"
 }
 ```
 
-- ### 290
+Another is when user token is wrong.
 
 ```json
 {
-    "error": 290,
     "message": "Admin access token is not valid"
 }
 ```
