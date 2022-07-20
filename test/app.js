@@ -5,13 +5,13 @@ const auth = new tfa('ZmErsKQcfaODiKAZdopcwQEjW');
 const result = auth.authUser('PemBvQIQBjSxKQrChoFRDzCoh');
 
 result.then((result) => {
-    const statCode = result.error;
+    const resultObject = result.response.data;
+    const statCode = result.response.status;
 
-    if (statCode === 800) {
+    if (statCode === 200) {
         console.log('Authenticated.');
-    } else if (statCode === 820) {
-        console.log('User token is wrong.');
-    } else if (statCode === 290) {
-        console.log('Admin token is wrong.');
+        const user = resultObject.user;
+    } else {
+        console.log(resultObject.message);
     }
 });
