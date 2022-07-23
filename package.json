@@ -27,5 +27,8 @@
   "homepage": "https://github.com/tele-fa/tfa-node-sdk#readme",
   "dependencies": {
     "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
   }
 }
