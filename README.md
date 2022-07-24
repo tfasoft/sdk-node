@@ -1,6 +1,6 @@
 # Telegram Factor Authentication - Node SDK
 
-[Node SDK document is in docs.telefa.com](https://docs.amirhossein.info/sdks/nodejs)
+[Node SDK document is in docs.tfasoft.com](https://docs.amirhossein.info/sdks/nodejs)
 
 If you are using **TFA** as your authentication service in your node applications, you can use our package.
 
