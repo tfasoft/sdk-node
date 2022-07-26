@@ -50,14 +50,14 @@ When you get the result, you have to use `then` and go for other stuff. Let's us
 
 ```javascript
 result.then((result) => {
-    const resultObject = result.response.data;
-    const statCode = result.response.status;
+    const data = result.data;
+    const statCode = result.status;
 
     if (statCode === 200) {
-        console.log('Authenticated.');
-        const user = resultObject.user;
+        const user = data.user;
+        console.log(user);
     } else {
-        console.log(resultObject.message);
+        console.log(data.message);
     }
 });
 ```
@@ -74,7 +74,6 @@ Here let's know about them in deep.
 
 ```json
 {
-    "error": 800,
     "user": {
         "_id": "document id",
         "uid": "telegram user id",
