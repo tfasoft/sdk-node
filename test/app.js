@@ -1,17 +1,17 @@
 const tfa = require('tfa-node-sdk');
 
-const auth = new tfa('ZmErsKQcfaODiKAZdopcwQEjW');
+const auth = new tfa('WuBjwvrQencoplabrUtPvDKaz');
 
-const result = auth.authUser('PemBvQIQBjSxKQrChoFRDzCoh');
+const result = auth.authUser('uAMGSFEFDQUevEHWulAMHIBtz');
 
 result.then((result) => {
-    const resultObject = result.response.data;
-    const statCode = result.response.status;
+    const data = result.data;
+    const statCode = result.status;
 
     if (statCode === 200) {
-        console.log('Authenticated.');
-        const user = resultObject.user;
+        const user = data.user;
+        console.log(user);
     } else {
-        console.log(resultObject.message);
+        console.log(data.message);
     }
 });
