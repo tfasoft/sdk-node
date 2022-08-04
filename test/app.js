@@ -1,6 +1,6 @@
 const tfa = require('tfa-node-sdk');
 
-const auth = new tfa('WuBjwvrQencoplabrUtPvDKaz');
+const auth = new tfa('itEvNsiSpmQFNDiOQtKHCVtDc');
 
 const result = auth.authUser('uAMGSFEFDQUevEHWulAMHIBtz');
 
