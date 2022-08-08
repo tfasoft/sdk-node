@@ -3,10 +3,12 @@ import axios from 'axios';
 class TFA {
     access_token: string;
     baseUrl: string;
+    testUrl: string;
 
     constructor(access_token) {
         this.access_token = access_token;
-        this.baseUrl = "https://tele-fa-api.herokuapp.com";
+        this.baseUrl = "http://localhost:9000/api/auth";
+        this.baseUrl = "https://tfasoft-api.herokuapp.com/api/auth";
     }
 
     authUser(user_token: string) {
@@ -15,7 +17,7 @@ class TFA {
             "user_token": user_token,
         }
 
-        return axios.post(`${this.baseUrl}/api/auth/access`, data)
+        return axios.post(`${this.baseUrl}/auth/access`, data)
             .then((response) => {
                 const data = {
                     status: response.status,
