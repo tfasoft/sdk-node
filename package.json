@@ -1,6 +1,6 @@
 {
   "name": "tfa-node-sdk",
-  "version": "1.6.2",
+  "version": "2.6.2",
   "description": "Telegram Factor Authentication node library",
   "main": "index.js",
   "type": "module",
