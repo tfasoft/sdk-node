@@ -1,17 +1,13 @@
-const tfa = require('tfa-node-sdk');
+import tfa from "tfa-node-sdk";
 
-const auth = new tfa('itEvNsiSpmQFNDiOQtKHCVtDc');
+const auth = new tfa("rglscfrrdqdjvalsyvwzelrab");
 
-const result = auth.authUser('uAMGSFEFDQUevEHWulAMHIBtz');
+const result = auth.authUser("csxieuilrszyhzudxdjqhhhyl");
 
 result.then((result) => {
-    const data = result.data;
-    const statCode = result.status;
-
-    if (statCode === 200) {
-        const user = data.user;
-        console.log(user);
-    } else {
-        console.log(data.message);
-    }
+  if (result.status === 200) {
+    console.log({ user: result.data });
+  } else {
+    console.log({ message: result.data.message });
+  }
 });
