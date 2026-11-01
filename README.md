@@ -1,5 +1,16 @@
 # Telegram Factor Authentication - Node SDK
 
+> [!IMPORTANT]
+> **Repository Migration**
+>
+> This repository has moved to GitLab.
+>
+> All active development and maintenance now take place at:
+>
+> **[View the repository on GitLab](https://gitlab.com/tfasoft/sdk/sdk-node)**
+>
+> This GitHub repository is retained for historical reference. Please use the GitLab repository for the latest updates, issues, and contributions.
+
 [Node SDK document is in docs.tfasoft.com](https://docs.amirhossein.info/sdks/nodejs)
 
 If you are using **TFA** as your authentication service in your node applications, you can use our package.
